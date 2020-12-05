@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema>
+
+<xs:simpleType name="Your Name">
+  <xs:restriction base="xs:string"/>
+</xs:simpleType>
+
+<xs:simpleType age="Your age">
+  <xs:restriction base="xs:positiveInteger"/>
+</xs:simpleType>
+
+
+<xs:simpleType hobbies="Bta hi do">
+  <xs:restriction base="xs:string">
+    <xs:pattern value="[0-200]"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:element color="Color you like the most!!">
+ <xs:simpleType>
+ <xs:restriction base="xs:string">
+ <xs:enumeration value="Red"/>
+ <xs:enumeration value="Blue"/>
+ <xs:enumeration value="Yellow"/>
+ <xs:enumeration value="Purple"/>
+ <xs:enumeration value="Green"/>
+ </xs:restriction>
+ </xs:simpleType>
+</xs:element>
+
+<xs:complexType name="Sibling names?">
+<xs:complexType mixed="true">
+  <xs:sequence>
+    <xs:element name="Sister" type="stringtype"/>
+    <xs:element name="Brother" type="stringtype">
+    <xs:element name="Sister's age" type="inttype"/>
+    <xs:element name="Brother's age" type="inttype"/>
+  </xs:sequence>
+</xs:complexType>
+
+</xs:complexType>
+
+<xs:complexType name="DateofBirth" mixed="true">
+  <xs:sequence>
+    <xs:element name="date" type="inttype"/>
+    <xs:element name="month" type="inttype"/>
+    <xs:element name="year" type="xs:integer"/>
+  </xs:sequence>
+  <xs:attribute name="gender" type="xs:string" use="required"/>
+</xs:complexType>
+</xs:schema>
