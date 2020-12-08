@@ -1,0 +1,21 @@
+<html>
+<head>
+<style type = "text/css" >
+  body { backgroud-color: cyan; }
+  p { color: yellow; }
+</style>
+<script>
+function myFunction() {
+var x = document.getElementById("fname");
+x.value = x.value.toUpperCase();
+}
+</script>
+</head>
+<body>
+<p><center>
+A function is triggered when the user releases a key in the input field. The
+function transforms the character to upper case.
+</center></p>
+Enter your name: <input type="text" id="fname" onkeyup="myFunction()">
+</body>
+</html>
